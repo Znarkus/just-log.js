@@ -2,7 +2,7 @@
   "author": "Markus Hedlund <markus@snowfire.net>",
   "name": "just-log",
   "description": "Another logging lib for node.js.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": ">=0.6.x"
   },
