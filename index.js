@@ -25,21 +25,21 @@ function _log(level, out, messageData) {
 	if (module.exports.mode[level] === false) {
 		return;
 	}
-	
+
 	var color = colors[level],
 		time = strftime('%e %b %H:%M:%S'),
 		levelText = pad('  [' + level + ']', 15, ' '),
 		messageFormatted = Util.format.apply(this, messageData);
-	
+
 	switch (out) {
 		case 'out':
 		case 'err':
-			Util[out == 'err' ? 'error' : 'puts'](
+			console[out == 'err' ? 'error' : 'log'](
 				'  '
 				+ Dye.grey(time)
 				+ (color ? Dye[color](levelText) : time)
 				+ messageFormatted
 			);
-		break;
+			break;
 	}
 }
